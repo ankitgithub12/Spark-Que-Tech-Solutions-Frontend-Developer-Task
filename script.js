@@ -1,4 +1,4 @@
-// script.js - Fixed Version
+
 
 // Preloader
 window.addEventListener('load', () => {
