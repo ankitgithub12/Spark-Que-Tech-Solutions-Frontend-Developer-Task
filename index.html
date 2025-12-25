@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spark Que Tech Solutions | Frontend Developer Task</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="spark"></div>
+            <div class="spark"></div>
+            <div class="spark"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Theme & Settings -->
+    <div class="settings-panel">
+        <button class="settings-toggle">
+            <i class="fas fa-cog fa-spin"></i>
+        </button>
+        <div class="settings-content">
+            <h4>Theme Settings</h4>
+            <div class="theme-colors">
+                <span class="color-option" data-color="#4361ee" style="background-color: #4361ee;"></span>
+                <span class="color-option" data-color="#3a0ca3" style="background-color: #3a0ca3;"></span>
+                <span class="color-option" data-color="#f72585" style="background-color: #f72585;"></span>
+                <span class="color-option" data-color="#4cc9f0" style="background-color: #4cc9f0;"></span>
+                <span class="color-option" data-color="#2ec4b6" style="background-color: #2ec4b6;"></span>
+                <span class="color-option" data-color="#ff9f1c" style="background-color: #ff9f1c;"></span>
+            </div>
+            <div class="theme-mode">
+                <button class="mode-btn active" data-mode="light">
+                    <i class="fas fa-sun"></i> Light
+                </button>
+                <button class="mode-btn" data-mode="dark">
+                    <i class="fas fa-moon"></i> Dark
+                </button>
+                <button class="mode-btn" data-mode="auto">
+                    <i class="fas fa-adjust"></i> Auto
+                </button>
+            </div>
+            <div class="animation-toggle">
+                <label>
+                    <input type="checkbox" id="animationToggle" checked>
+                    <span class="slider"></span>
+                    Enable Animations
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <span>Spark Que <strong>Tech</strong></span>
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">
+                    <span>Home</span>
+                </a>
+                <a href="#services" class="nav-link">
+                    <span>Services</span>
+                </a>
+                <a href="#about" class="nav-link">
+                    <span>Why Us</span>
+                </a>
+                <a href="#portfolio" class="nav-link">
+                    <span>Portfolio</span>
+                </a>
+                <a href="#testimonials" class="nav-link">
+                    <span>Testimonials</span>
+                </a>
+                <a href="#contact" class="nav-link">
+                    <span>Contact</span>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="nav-btn cta-outline" id="demoBtn">
+                    <i class="fas fa-play-circle"></i>
+                    Free Demo
+                </button>
+                <button class="nav-btn cta-primary" id="quoteBtn">
+                    Get Quote
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge">🚀 Featured by TechCrunch</span>
+                    <span class="badge">🏆 Award Winning</span>
+                </div>
+                
+                <h1 class="hero-title animate-text">
+                    <span class="gradient-text">Spark Que Tech</span>
+                    Solutions
+                </h1>
+                
+                <div class="typewriter">
+                    <h2 class="tagline">Our wish is accomplish your wish</h2>
+                </div>
+                
+                <p class="hero-description">
+                    We transform ideas into <strong>digital excellence</strong>. With cutting-edge technology and innovative solutions, we help businesses thrive in the digital world.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3 data-count="250">0</h3>
+                        <p>Projects Delivered</p>
+                    </div>
+                    <div class="stat">
+                        <h3 data-count="98">0</h3>
+                        <p>Client Satisfaction</p>
+                    </div>
+                    <div class="stat">
+                        <h3 data-count="50">0</h3>
+                        <p>Team Experts</p>
+                    </div>
+                </div>
+                
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-lg" id="startProject">
+                        <i class="fas fa-rocket"></i>
+                        Start Your Project
+                    </button>
+                    <button class="btn btn-outline btn-lg" id="watchVideo">
+                        <i class="fas fa-play"></i>
+                        Watch Demo
+                    </button>
+                </div>
+                
+                <div class="trusted-by">
+                    <p>Trusted by leading companies:</p>
+                    <div class="companies">
+                        <div class="company-logo"><i class="fab fa-google"></i> Google</div>
+                        <div class="company-logo"><i class="fab fa-microsoft"></i> Microsoft</div>
+                        <div class="company-logo"><i class="fab fa-amazon"></i> Amazon</div>
+                        <div class="company-logo"><i class="fab fa-slack"></i> Slack</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Revenue Growth</h4>
+                    <p>+150% average</p>
+                </div>
+                
+                <div class="floating-card card-2">
+                    <i class="fas fa-bolt"></i>
+                    <h4>Fast Delivery</h4>
+                    <p>30% faster</p>
+                </div>
+                
+                <div class="floating-card card-3">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Secure Solutions</h4>
+                    <p>100% safe</p>
+                </div>
+                
+                <div class="main-visual">
+                    <div class="visual-container">
+                        <div class="circle-animation"></div>
+                        <div class="device-mockup">
+                            <div class="screen">
+                                <div class="screen-content">
+                                    <div class="app-header">
+                                        <div class="app-logo">SQ</div>
+                                        <h5>Spark Que Dashboard</h5>
+                                    </div>
+                                    <div class="app-stats">
+                                        <div class="stat-item">
+                                            <span class="up">↑ 24%</span>
+                                            <p>Traffic</p>
+                                        </div>
+                                        <div class="stat-item">
+                                            <span class="up">↑ 42%</span>
+                                            <p>Conversion</p>
+                                        </div>
+                                        <div class="stat-item">
+                                            <span>98%</span>
+                                            <p>Uptime</p>
+                                        </div>
+                                    </div>
+                                    <div class="chart-container">
+                                        <div class="chart-bar" style="height: 70%;"></div>
+                                        <div class="chart-bar" style="height: 90%;"></div>
+                                        <div class="chart-bar" style="height: 60%;"></div>
+                                        <div class="chart-bar" style="height: 80%;"></div>
+                                        <div class="chart-bar" style="height: 95%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll to explore</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">What We Offer</span>
+                <h2 class="section-title">Our <span class="highlight">Services</span></h2>
+                <p class="section-description">
+                    We provide comprehensive digital solutions tailored to your business needs, ensuring maximum ROI and growth.
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Custom websites and web applications built with modern technologies and frameworks.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Responsive Design</li>
+                        <li><i class="fas fa-check"></i> E-commerce Solutions</li>
+                        <li><i class="fas fa-check"></i> Progressive Web Apps</li>
+                    </ul>
+                    <a href="#" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card featured">
+                    <div class="service-badge">Most Popular</div>
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Digital Marketing & SEO</h3>
+                    <p>Boost your online presence and reach your target audience with our data-driven strategies.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> SEO Optimization</li>
+                        <li><i class="fas fa-check"></i> Social Media Marketing</li>
+                        <li><i class="fas fa-check"></i> PPC Campaigns</li>
+                    </ul>
+                    <a href="#" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Graphic Design</h3>
+                    <p>Creative and eye-catching designs for branding, marketing materials, and user interfaces.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Brand Identity</li>
+                        <li><i class="fas fa-check"></i> UI/UX Design</li>
+                        <li><i class="fas fa-check"></i> Marketing Materials</li>
+                    </ul>
+                    <a href="#" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-pie"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>CRM & Reports</h3>
+                    <p>Implement CRM systems and generate insightful reports to drive your business decisions.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Custom CRM Solutions</li>
+                        <li><i class="fas fa-check"></i> Analytics Dashboard</li>
+                        <li><i class="fas fa-check"></i> Real-time Reports</li>
+                    </ul>
+                    <a href="#" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                        <div class="icon-bg"></div>
+                    </div>
+                    <h3>Staff Augmentation</h3>
+                    <p>Scale your team with our skilled professionals to meet your project requirements.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Dedicated Developers</li>
+                        <li><i class="fas fa-check"></i> Project Managers</li>
+                        <li><i class="fas fa-check"></i> Quality Assurance</li>
+                    </ul>
+                    <a href="#" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="service-card cta-card">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Custom Solutions</h3>
+                    <p>Have a unique requirement? Let's build a custom solution for your business.</p>
+                    <button class="btn btn-primary">
+                        Discuss Project <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose SQTS Section -->
+    <section class="why-us" id="about">
+        <div class="container">
+            <div class="why-us-content">
+                <div class="section-header">
+                    <span class="section-subtitle">Our Advantages</span>
+                    <h2 class="section-title">Why Choose <span class="highlight">SQTS</span>?</h2>
+                    <p class="section-description">
+                        We stand out from the competition with our commitment to excellence, innovative approach, and proven results.
+                    </p>
+                </div>
+                
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Award-Winning Quality</h3>
+                            <p>Recognized by industry leaders for exceptional service delivery and innovation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>On-Time Delivery</h3>
+                            <p>We pride ourselves on delivering projects within deadlines, every single time.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>24/7 Support</h3>
+                            <p>Round-the-clock technical support to ensure your business never stops.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Secure & Reliable</h3>
+                            <p>Enterprise-grade security measures to protect your data and applications.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="progress-stats">
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span>Client Satisfaction</span>
+                            <span>98%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 98%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span>On-Time Delivery</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-item">
+                        <div class="progress-header">
+                            <span>Repeat Business</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="why-us-visual">
+                <div class="visual-container">
+                    <div class="hexagon-grid">
+                        <div class="hexagon"></div>
+                        <div class="hexagon"></div>
+                        <div class="hexagon"></div>
+                        <div class="hexagon"></div>
+                        <div class="hexagon"></div>
+                    </div>
+                    
+                    <div class="stats-circle">
+                        <div class="circle-item">
+                            <h4>10+</h4>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="circle-item">
+                            <h4>250+</h4>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="circle-item">
+                            <h4>500+</h4>
+                            <p>Projects Done</p>
+                        </div>
+                        <div class="circle-item">
+                            <h4>50+</h4>
+                            <p>Team Members</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Work</span>
+                <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+                <p class="section-description">
+                    Explore some of our recent projects that showcase our expertise and creativity.
+                </p>
+            </div>
+            
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="marketing">Marketing</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="crm">CRM</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="E-commerce Platform">
+                        <div class="portfolio-overlay">
+                            <h4>E-commerce Platform</h4>
+                            <p>Complete online shopping solution with advanced features</p>
+                            <a href="#" class="portfolio-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="marketing">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1115&q=80" alt="Digital Marketing Campaign">
+                        <div class="portfolio-overlay">
+                            <h4>Marketing Campaign</h4>
+                            <p>Result-driven campaign increasing sales by 300%</p>
+                            <a href="#" class="portfolio-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="design">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1064&q=80" alt="Brand Identity">
+                        <div class="portfolio-overlay">
+                            <h4>Brand Identity</h4>
+                            <p>Complete brand overhaul for tech startup</p>
+                            <a href="#" class="portfolio-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="portfolio-cta">
+                <p>Want to see more of our work?</p>
+                <button class="btn btn-outline">
+                    View Full Portfolio <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Client Stories</span>
+                <h2 class="section-title">What Our <span class="highlight">Clients Say</span></h2>
+                <p class="section-description">
+                    Don't just take our word for it. Here's what our clients have to say about working with us.
+                </p>
+            </div>
+            
+            <div class="swiper testimonials-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>"Spark Que Tech Solutions transformed our online presence. Our website traffic increased by 300% after they implemented their SEO strategies. The team was professional, responsive, and delivered beyond expectations."</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Rodriguez">
+                            <div class="author-info">
+                                <h4>Michael Rodriguez</h4>
+                                <p>CEO, TechVision Inc.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>"The web application they developed for us has streamlined our operations and improved efficiency by 40%. Highly recommend their services! Their attention to detail and commitment to quality is remarkable."</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson">
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>Operations Manager, RetailPro</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>"Their staff augmentation service helped us quickly scale our development team. The professionals they provided were highly skilled and productive. It was like having an in-house team without the overhead."</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="David Chen">
+                            <div class="author-info">
+                                <h4>David Chen</h4>
+                                <p>CTO, FinTech Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="section-header">
+                        <span class="section-subtitle">Get In Touch</span>
+                        <h2 class="section-title">Let's <span class="highlight">Work Together</span></h2>
+                        <p class="section-description">
+                            Ready to transform your business? Contact us today for a free consultation.
+                        </p>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Our Location</h4>
+                                <p>1300 Center Avenue
+                                  Indore [M.P]</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone Number</h4>
+                                <p>+91 7974886243</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email Address</h4>
+                                <p>sparkquetechsolutions@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Working Hours</h4>
+                                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="Enter your name" required>
+                            <div class="input-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter your email" required>
+                            <div class="input-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="Enter your phone">
+                            <div class="input-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" required>
+                                <option value="">Select a service</option>
+                                <option value="web">Web Development</option>
+                                <option value="marketing">Digital Marketing</option>
+                                <option value="design">Graphic Design</option>
+                                <option value="crm">CRM & Reports</option>
+                                <option value="staff">Staff Augmentation</option>
+                                <option value="custom">Custom Solution</option>
+                            </select>
+                            <div class="input-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Project Details</label>
+                            <textarea id="message" placeholder="Tell us about your project..." rows="5" required></textarea>
+                            <div class="input-icon">
+                                <i class="fas fa-comment"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-footer">
+                            <div class="form-check">
+                                <input type="checkbox" id="newsletter" checked>
+                                <label for="newsletter">Subscribe to our newsletter</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                Send Message <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Business?</h2>
+                <p>Join 250+ satisfied clients who have accelerated their growth with Spark Que Tech Solutions.</p>
+                <div class="cta-actions">
+                    <button class="btn btn-primary btn-lg">
+                        <i class="fas fa-calendar-check"></i>
+                        Schedule Free Consultation
+                    </button>
+                    <button class="btn btn-outline btn-lg">
+                        <i class="fas fa-file-download"></i>
+                        Download Brochure
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-bolt"></i>
+                        <span>Spark Que <strong>Tech</strong></span>
+                    </div>
+                    <p>Transforming businesses with innovative technology solutions since 2013.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">Why Us</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">Graphic Design</a></li>
+                        <li><a href="#">CRM & Reports</a></li>
+                        <li><a href="#">Staff Augmentation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 1300 Center Avenue
+                          Indore [M.P]</li>
+                        <li><i class="fas fa-phone"></i> +91 7974886243</li>
+                        <li><i class="fas fa-envelope"></i> sparkquetechsolutions@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2023 Spark Que Tech Solutions. All rights reserved.</p>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+                <div class="developer-credit">
+                    <p>Frontend Developer Task - Created with <i class="fas fa-heart"></i> for Spark Que Tech Solutions</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Video Modal -->
+    <div class="modal" id="videoModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <div class="video-container">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                        <h3>Company Introduction Video</h3>
+                        <p>This would be a professional video showcasing Spark Que Tech Solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal success-modal" id="successModal">
+        <div class="modal-content">
+            <button class="close-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3>Message Sent Successfully!</h3>
+                <p>Thank you for contacting Spark Que Tech Solutions. We'll get back to you within 24 hours.</p>
+                <button class="btn btn-primary" id="closeSuccessModal">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu (Will be created dynamically by JS) -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
