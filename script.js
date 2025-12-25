@@ -591,12 +591,4 @@ document.addEventListener('DOMContentLoaded', () => {
   animatedElements.forEach((el, index) => {
       el.style.animationDelay = `${index * 0.1}s`;
   });
-  
-  // Initialize animations
-  if (typeof AOS !== 'undefined') {
-      AOS.init({
-          duration: 1000,
-          once: true
-      });
-  }
 });
